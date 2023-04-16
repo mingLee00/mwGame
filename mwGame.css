@@ -1,0 +1,106 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+#gameArea {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  background-image: url("bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 2px solid #000;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+#timer {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 24px;
+  font-family: Arial, sans-serif;
+  z-index: 1002;
+}
+
+#mainCharacter,
+#obstacle,
+.obstacle {
+  position: absolute;
+  bottom: 10px;
+  width: 70px;
+  height: 70px;
+}
+
+#bkBall {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+}
+
+.button-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background-color: #f0f0f0;
+}
+
+button {
+  position: relative;
+  font-size: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid #000;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#leftButton {
+  margin-right: 50px;
+}
+
+#rightButton {
+  margin-left: 50px;
+}
+
+.controls {
+  display: none;
+}
+
+#gameOverContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1000;
+}
+
+#redoButton {
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  z-index: 1001;
+}
+
+#gameOverContainer img {
+  width: 200px;
+  height: 70px;
+  margin-bottom: 20px;
+  z-index: 1001;
+}

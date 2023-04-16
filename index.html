@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./mwGame.css" />
+    <title>명헌이의 우성이 피하기 게임</title>
+  </head>
+  <body>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <div style="margin-bottom: 20px;">
+        <h1>왕옹왕해 주세요, 명헌이 형!</h1>
+        <p>🍙 하늘에서 내려오는 우성이에게 닿으면 게임이 종료됩니다.</p>
+        <p>🍙 시간이 지날수록 우성이가 떨어지는 속도가 빨라집니다.</p>
+        <p>🍙 농구공을 획득할 경우 속도가 우성이의 속도가 느려집니다.</p>
+        <p>🍙 화면에 보이는 화살표 버튼을 클릭하면 좌우로 이동하고, PC 버전 사용시 키보드 좌우 버튼을 클릭하면 됩니다.</p>
+        <p>🍙 PC 버전에 최적화돼 있습니다.</p>
+      </div>
+      <div class="game-container">
+        <div id="gameArea">
+          <div id="timer">0.00</div>
+          <img src="./m_img.png" id="mainCharacter" />
+          <img class="obstacle" id="obstacle0" src="./w_img.png" style="display:none" />
+          <img class="obstacle" id="obstacle1" src="./w_img1.png" style="display:none" />
+          <img class="obstacle" id="obstacle2" src="./w_img2.png" style="display:none" />
+          <img class="obstacle" id="obstacle3" src="./w_img3.png" style="display:none" />
+          <img class="obstacle" id="obstacle4" src="./w_img4.png" style="display:none" />
+          <img class="obstacle" id="obstacle5" src="./w_img5.png" style="display:none" />
+          <img class="obstacle" id="obstacle6" src="./w_img6.png" style="display:none" />
+
+          <img src="./bk_ball.png" id="bkBall" style="display: none;" />
+
+          <div id="gameOverContainer">
+            <img id="gameOver" src="./game_over.png" alt="Game Over" />
+            <img id="redoButton" src="./re_try.png" alt="다시하기" />
+          </div>
+        </div>
+        <div class="button-container">
+          <button id="leftButton">&#8592;</button>
+          <button id="rightButton">&#8594;</button>
+        </div>
+      </div>
+    </div>
+    <script src="./mwGame.js"></script>
+  </body>
+</html>
