@@ -5,6 +5,7 @@ const redoButton = document.getElementById("redoButton");
 const leftButton = document.getElementById("leftButton");
 const rightButton = document.getElementById("rightButton");
 const bkBall = document.getElementById("bkBall");
+const scoreElement = document.getElementById("score");
 const obstacleList = [
     document.getElementById("obstacle0"),
     document.getElementById("obstacle1"),
@@ -18,6 +19,7 @@ const obstacleList = [
 let interval;
 let spawnInterval;
 let gameTime = 0;
+let score = 0;
 let obstacleSpeed = 1;
 let obstacles = [];
 let bkBalls = [];
@@ -104,6 +106,8 @@ function spawnBkBall() {
           document.getElementById("gameArea").removeChild(currentBkBall);
           bkBalls.splice(i, 1);
           i--;
+          score++;
+          scoreElement.innerText = `Score: ${score}`;
         } else if (parseFloat(currentBkBall.style.top) > 100) {
           document.getElementById("gameArea").removeChild(currentBkBall);
           bkBalls.splice(i, 1);
@@ -137,6 +141,8 @@ redoButton.addEventListener("click", () => {
     clearInterval(spawnInterval); // 이전 스폰 인터벌을 초기화
     mainCharacter.style.left = "50%";
     gameTime = 0;
+    score = 0;
+    scoreElement.innerText = `Score: ${score}`;
     timer.innerText = gameTime.toFixed(2);
     obstacleSpeed = 0.3; // 게임 재시작 시 속도를 초기화
     interval = setInterval(updateGame, 10);
